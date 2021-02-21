@@ -1,27 +1,8 @@
-from bs4 import BeautifulSoup 
 import requests
 import pandas as pd
 import numpy as np
 import random as rnd
 
-#######GET SEASON PLAYER DATA###################################################
-'''url = "https://www.basketball-reference.com/leagues/NBA_2021_per_game.html"
-
-page = requests.get(url)
-
-soup = BeautifulSoup(page.content, 'html.parser')
-
-soup.findAll('tr', limit=2)
-headers = [th.getText() for th in soup.findAll('tr', limit=2)[0].findAll('th')]
-headers = headers[1:]
-
-rows = soup.findAll('tr')[1:]
-player_stats = [[td.getText() for td in rows[i].findAll('td')]
-            for i in range(len(rows))]
-stats = pd.DataFrame(player_stats, columns = headers)
-print(stats.head(10))'''
-
-#######GET SEASON PLAYER DATA###################################################
 
 #######Fitness Function#########################################################
 
@@ -41,7 +22,7 @@ print(stats.head(10))'''
 
 #Lineup requirements: 1PG, 1SG, 1SF, 1PF, 1C, 1G(PG, SG), 1F (SF, PF), 1 UTIL (PG, SG, SF, PF, C)
 
-df = pd.read_csv('dksalaries-3.csv', header = 0)
+df = pd.read_csv('SamplePlayers.csv', header = 0)
 
 point_guard = pd.DataFrame()
 shooting_guard = pd.DataFrame()
